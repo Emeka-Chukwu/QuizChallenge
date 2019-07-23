@@ -18,6 +18,7 @@ class CreateChallengesTable extends Migration
             $table->string('challenge');
             $table->integer('user_id');
             $table->integer('subject_id');
+            $table->integer('topic_id');
             $table->integer('started');
             $table->integer('completed');
             $table->timestamps();
