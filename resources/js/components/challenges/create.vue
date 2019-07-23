@@ -129,7 +129,7 @@ export default {
                 this.message = "Challenge has been created successfully";
                 console.log(this.message)
                 console.log(res)
-                 setTimeout(()=>this.$router.push('/questions'), 1500)
+                //  setTimeout(()=>this.$router.push('/questions'), 1500)
                 }).catch(err =>{
                     this.messageError = " Challenge not created ";
                     alert('failed');

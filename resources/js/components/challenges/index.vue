@@ -1,7 +1,7 @@
 <template>
     <div class="containe">
         <div class=""><br>
-            <router-link :to="`/challenges/create`">Start Challenge</router-link>
+            <router-link to="/challenges/create">Start Challenge</router-link>
             <br>
             <br>
         </div>
