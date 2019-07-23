@@ -34,6 +34,9 @@ class ChallengesController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'subject' => 'required'
+        ]);
         $challenge = new Challenge();
         $challenge->challenge = $request->input('challenge');
         $challenge->topic_id = $request->input('topic');
