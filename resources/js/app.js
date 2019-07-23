@@ -22,7 +22,7 @@ const routes = [
     { path: '/', component: require('./components/startquiz.vue').default },
     { path: '/user', name: 'navbar', component: require('./components/navbar.vue').default },
     { path: '/challenges', name: 'challenges', component: require('./components/challenges/index.vue').default },
-    { path: '/challenges/creat', name: 'challengesCreate', component: require('./components/challenges/create.vue').default },
+    { path: '/challenges/create', name: 'challengesCreate', component: require('./components/challenges/create.vue').default },
     { path: '/challenges/:id/edit', name: 'challengesEdit', component: require('./components/challenges/edit.vue').default },
     { path: '/challenges/:id/delete', name: 'challengesDelete', component: require('./components/challenges/delete.vue').default },
     { path: '/questions', name: 'questions', component: require('./components/questions/index.vue').default },
