@@ -38,11 +38,11 @@ class ChallengesController extends Controller
         $challenge->challenge = $request->input('challenge');
         $challenge->topic_id = $request->input('topic');
         $challenge->subject_id = $request->input('subject');
-        // $challenge->user_ids = auth()->user()->id;
+       
         $challenge->user_id = $request->input('user_id');
-        // return $challenge;
-        $challenge->started = 0;
-        $challenge->completed = 0;
+       
+        $challenge->started = $request->input('started');
+        $challenge->completed = $request->input('completed');
         $challenge->save();
         return new ChallengeResource($challenge);
     }
