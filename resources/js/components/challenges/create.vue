@@ -3,7 +3,7 @@
         <br>
         <h3>New Challenge</h3>
 
-        <form action="" method="post" @submit="submitForm">
+        <form  @submit="submitForm" enctype="multipart/form-data">
             <!-- value of the challenge) to insert into challenge_id which is in the questions table --> -->
        <div class="form-group">
             <label for="subject"> Choose Subject</label> 
