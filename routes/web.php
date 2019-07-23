@@ -17,6 +17,7 @@
 
 Route::get('/', 'PagesController@index')->name('index');
 Route::get('/challenges/{challenge}', 'PagesController@challenges');
+Route::get('/topics/{id}', 'PagesController@challenges');
 Route::get('/challenges/{challenges}/quiz', 'PagesController@startchallenge')->name('startchallenge');
 Auth::routes();
 
