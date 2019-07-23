@@ -41,8 +41,7 @@
             <div class="form-group">
                 <label for="challenge"> Challenge </label>
                 <input type="text" v-model="challenge" class="form-control" id="">
-                <input type="hidden" v-model="subject">
-                <input type="hidden" v-model="topic">
+                
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary">
@@ -118,6 +117,7 @@ export default {
          submitChallenge: function(e)
         {
             e.preventDefault();
+            alert('submitting form')
 
             var formdata = new FormData();
             formdata.append('subject', this.subject);
@@ -129,11 +129,9 @@ export default {
                 this.message = "Challenge has been created successfully";
                 console.log(this.message)
                 console.log(res)
-                
-
-            })
-                .catch(err =>{
+                }).catch(err =>{
                     this.messageError = " Challenge not created ";
+                    alert('failed');
                 })
             // })
 
