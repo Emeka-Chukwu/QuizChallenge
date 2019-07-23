@@ -42,7 +42,7 @@ class ChallengesController extends Controller
         $challenge->user_id = $request->input('user_id');
         // return $challenge;
         $challenge->started = 0;
-        $challenge-> completed = 0;
+        $challenge->completed = 0;
         $challenge->save();
         return new ChallengeResource($challenge);
     }
