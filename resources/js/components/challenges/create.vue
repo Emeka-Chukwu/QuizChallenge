@@ -127,8 +127,9 @@ export default {
             formdata.append('challenge', this.challenge);
             formdata.append('user_id', this.userId)
             formdata.append('started', this.started)
-            formdata.append('completed', this.completed)
-            axios.post('api/challenges',formdata)
+            formdata.append('completed', this.completed);
+           
+            axios.post('/api/challenges', formdata)
             .then(res=>{
                 this.message = "Challenge has been created successfully";
                 console.log(this.message)
@@ -136,7 +137,7 @@ export default {
                 //  setTimeout(()=>this.$router.push('/questions'), 1500)
                 }).catch(err =>{
                     this.messageError = " Challenge not created ";
-                    console.log
+                    console.log(err)
                 })
             // })
 
