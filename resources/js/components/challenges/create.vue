@@ -3,7 +3,7 @@
         <br>
         <h3>New Challenge</h3>
 
-        <form  @submit="submitForm" enctype="multipart/form-data">
+        <form  @submit="formSubmit" enctype="multipart/form-data">
             <!-- value of the challenge) to insert into challenge_id which is in the questions table --> -->
        <div class="form-group">
             <label for="subject"> Choose Subject</label> 
@@ -44,7 +44,7 @@
                 
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary">
+                <input type="submit" value="Create h" class="btn btn-primary">
             </div>
         </form>
     </div>
@@ -114,7 +114,7 @@ export default {
 
      
 
-         submitForm: function(e)
+         formSubmit: function(e)
         {
             e.preventDefault();
             alert('submitting form')
@@ -129,6 +129,7 @@ export default {
                 this.message = "Challenge has been created successfully";
                 console.log(this.message)
                 console.log(res)
+                 setTimeout(()=>this.$router.push('/questions'), 1500)
                 }).catch(err =>{
                     this.messageError = " Challenge not created ";
                     alert('failed');

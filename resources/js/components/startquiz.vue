@@ -131,7 +131,7 @@ export default {
                     // const temp = this.datashuffled[i];
                     // console.log(temp)
                     // this.datashuffled = this.datashuffled[j];
-                    // this.datashuffled[j] = temp;
+                    // this.datashuffled[j] = temp;l
                 }
                 // this.datashuffled = this.datashuffled.shuffle();
             }
