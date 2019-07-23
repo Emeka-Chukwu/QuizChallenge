@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-// $DATABASE_URL = parse_url('postgres://csdxawvqzghglj:c8439a3f8fce8b73ee6773f41572784edd00c19d864a4dab793425052b2a356b@ec2-54-83-1-101.compute-1.amazonaws.com:5432/dt2tg9p27bo7i');
+$DATABASE_URL = parse_url('postgres://hagnkbpeeqfpfn:db36eed757f636b2ffa74392661f01fa0676ae6d78ec952b5c5844361a3e623b@ec2-50-19-222-129.compute-1.amazonaws.com:5432/d9vu6co03m0p8b');
  
 return [
 
@@ -64,20 +64,20 @@ return [
             ]) : [],
         ],
 
-        // 'pgsql' => [
-        //     'driver' => 'pgsql',
-        //     // 'url' => $DATABASE_URL["host"],
-        //     'host' => $DATABASE_URL["host"],
-        //     'port' => $DATABASE_URL["port"],
-        //     'database' => ltrim($DATABASE_URL["path"],"/"),
-        //     'username' => $DATABASE_URL["user"],
-        //     'password' => $DATABASE_URL["pass"],
-        //     'charset' => 'utf8',
-        //     'prefix' => '',
-        //     // 'prefix_indexes' => true,
-        //     'schema' => 'public',
-        //     'sslmode' => 'prefer',
-        // ],
+        'pgsql' => [
+            'driver' => 'pgsql',
+            // 'url' => $DATABASE_URL["host"],
+            'host' => $DATABASE_URL["host"],
+            'port' => $DATABASE_URL["port"],
+            'database' => ltrim($DATABASE_URL["path"],"/"),
+            'username' => $DATABASE_URL["user"],
+            'password' => $DATABASE_URL["pass"],
+            'charset' => 'utf8',
+            'prefix' => '',
+            // 'prefix_indexes' => true,
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
