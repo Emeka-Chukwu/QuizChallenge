@@ -1985,14 +1985,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['userId'],
   data: function data() {
     return {
       subjects: [],
       subject: 1,
-      inputchallenge: [],
       challenge: '',
       topic: 1,
       topics: [],
@@ -2058,7 +2056,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchData: function fetchData() {
       var _this5 = this;
 
-      axios.get('/api/challenges/1').then(function (res) {
+      axios.get('/api/challenges/' + this.$route.params.id).then(function (res) {
         _this5.challenge = res.data.challenge;
         console.log(res);
       })["catch"](function (err) {
@@ -39103,7 +39101,7 @@ var render = function() {
               }
             ],
             staticClass: "form-control",
-            attrs: { type: "text", id: "" },
+            attrs: { type: "text" },
             domProps: { value: _vm.challenge },
             on: {
               input: function($event) {
@@ -39111,48 +39109,6 @@ var render = function() {
                   return
                 }
                 _vm.challenge = $event.target.value
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.subject,
-                expression: "subject"
-              }
-            ],
-            attrs: { type: "hidden" },
-            domProps: { value: _vm.subject },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.subject = $event.target.value
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.topic,
-                expression: "topic"
-              }
-            ],
-            attrs: { type: "hidden" },
-            domProps: { value: _vm.topic },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.topic = $event.target.value
               }
             }
           })

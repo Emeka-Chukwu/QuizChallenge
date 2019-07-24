@@ -59,7 +59,7 @@ class ChallengesController extends Controller
     public function show($id)
     {
         $challenge = Challenge::find($id);
-        
+        return $challenge;
         return new ChallengeResource($challenge);
     }
 

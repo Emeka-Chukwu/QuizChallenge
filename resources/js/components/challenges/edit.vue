@@ -39,9 +39,8 @@
 
             <div class="form-group">
                 <label for="challenge"> Challenge </label>
-                <input type="text" v-model="challenge" class="form-control" id="">
-                <input type="hidden" v-model="subject">
-                <input type="hidden" v-model="topic">
+                <input type="text" v-model="challenge" class="form-control">
+               
             </div>
             <div class="form-group">
                 <input type="submit" value="Update" class="btn btn-primary">
@@ -60,12 +59,10 @@ export default {
         return{
             subjects: [],
             subject: 1,
-           
-            inputchallenge:[],
             challenge:'',
             topic : 1,
             topics : [],
-            challenge_id: 1,
+            challenge_id: 1
         }
     },
     mounted(){
@@ -135,7 +132,7 @@ export default {
 
         fetchData: function()
         {
-            axios.get('/api/challenges/1').then(res=>{
+            axios.get('/api/challenges/'+this.$route.params.id).then(res=>{
                 this.challenge = res.data.challenge;
                 console.log(res)
             }).catch(err=>{
