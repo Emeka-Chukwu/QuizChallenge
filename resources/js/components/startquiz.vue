@@ -30,7 +30,7 @@
             </div>
 
                <!-- <b> {{indexQ}}</b> -->
-               {{datashuffled}}
+               <!-- {{datashuffled}} -->
             
             <button @click="nextQuestion">Answer </button>
         </div>

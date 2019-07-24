@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div>
+            <a href="/questions/create" class="btn btn-primary">Add a Question</a>
+        </div>
         <!-- the subject selection for querying the database for where conditon in the topicsController -->
         <div class="form-group">
             <label for="subject"> Choose Subject</label> 

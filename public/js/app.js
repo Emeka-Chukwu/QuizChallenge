@@ -2272,6 +2272,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['userId', 'challengeName', 'userName']
 });
@@ -2825,6 +2850,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -39373,7 +39401,20 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h3", [_vm._v("\n        Navigation will be;\n    ")]),
+    _c("h3", [
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
+        [
+          _c("router-link", { attrs: { to: "/" } }, [_vm._v(" home")]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1)
+        ],
+        1
+      )
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -39381,8 +39422,6 @@ var render = function() {
         _c("router-link", { attrs: { to: "/emeka" } }, [_vm._v(" quiz")]),
         _vm._v(" "),
         _c("router-link", { attrs: { to: "user" } }, [_vm._v(" user")]),
-        _vm._v(" "),
-        _c("router-link", { attrs: { to: "/" } }, [_vm._v(" home")]),
         _vm._v(" "),
         _c("router-link", { attrs: { to: "/questions" } }, [
           _vm._v("Questions")
@@ -39404,7 +39443,83 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarTogglerDemo02",
+          "aria-controls": "navbarTogglerDemo02",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "collapse navbar-collapse",
+        attrs: { id: "navbarTogglerDemo02" }
+      },
+      [
+        _c("ul", { staticClass: "navbar-nav mr-auto mt-2 mt-lg-0" }, [
+          _c("li", { staticClass: "nav-item active" }, [
+            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+              _vm._v("Home "),
+              _c("span", { staticClass: "sr-only" }, [_vm._v("(current)")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "nav-item" }, [
+            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+              _vm._v("Link")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "nav-item" }, [
+            _c(
+              "a",
+              {
+                staticClass: "nav-link disabled",
+                attrs: { href: "#", tabindex: "-1", "aria-disabled": "true" }
+              },
+              [_vm._v("Disabled")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
+          _c("input", {
+            staticClass: "form-control mr-sm-2",
+            attrs: { type: "search", placeholder: "Search" }
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-outline-success my-2 my-sm-0",
+              attrs: { type: "submit" }
+            },
+            [_vm._v("Search")]
+          )
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -40380,6 +40495,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
       _c("label", { attrs: { for: "subject" } }, [_vm._v(" Choose Subject")]),
       _vm._v(" "),
@@ -40558,7 +40675,7 @@ var render = function() {
       _c(
         "thead",
         [
-          _vm._m(0),
+          _vm._m(1),
           _vm._v(" "),
           _vm._l(_vm.questions, function(question, index) {
             return _c("tr", { key: index }, [
@@ -40606,6 +40723,21 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-primary",
+          attrs: { href: "/questions/create" }
+        },
+        [_vm._v("Add a Question")]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -40774,11 +40906,6 @@ var render = function() {
                   ])
                 }),
                 _vm._v(" "),
-                _vm._v(
-                  "\r\n               " +
-                    _vm._s(_vm.datashuffled) +
-                    "\r\n            \r\n            "
-                ),
                 _c("button", { on: { click: _vm.nextQuestion } }, [
                   _vm._v("Answer ")
                 ])
