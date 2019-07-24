@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <a href="/questions/create" class="btn btn-primary">Add a Question</a>
+            <router-link to="/questions/create" class="btn btn-primary">Add a Question</router-link>
         </div>
         <!-- the subject selection for querying the database for where conditon in the topicsController -->
         <div class="form-group">

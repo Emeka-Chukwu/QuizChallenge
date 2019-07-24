@@ -40495,7 +40495,20 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "div",
+      [
+        _c(
+          "router-link",
+          {
+            staticClass: "btn btn-primary",
+            attrs: { to: "/questions/create" }
+          },
+          [_vm._v("Add a Question")]
+        )
+      ],
+      1
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "form-group" }, [
       _c("label", { attrs: { for: "subject" } }, [_vm._v(" Choose Subject")]),
@@ -40675,7 +40688,7 @@ var render = function() {
       _c(
         "thead",
         [
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
           _vm._l(_vm.questions, function(question, index) {
             return _c("tr", { key: index }, [
@@ -40723,21 +40736,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-primary",
-          attrs: { href: "/questions/create" }
-        },
-        [_vm._v("Add a Question")]
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
