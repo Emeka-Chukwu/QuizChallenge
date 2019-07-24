@@ -39420,7 +39420,7 @@ var render = function() {
         { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
         [
           _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
-            _vm._v("Navbar")
+            _vm._v("Quiz")
           ]),
           _vm._v(" "),
           _vm._m(0),
