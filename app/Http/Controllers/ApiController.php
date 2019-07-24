@@ -87,11 +87,11 @@ class ApiController extends Controller
                       if($correct_answer == $choice)
                       {
                           $is_correct = true;
-                          echo $is_correct;
+                        //   echo $is_correct;
                       }
                       else
                       {
-                          $is_correct = 0;
+                          $is_correct = false;
                           echo $is_correct;
                       }
   
@@ -186,7 +186,7 @@ class ApiController extends Controller
                     }
                     else
                     {
-                        $is_correct = 0;
+                        $is_correct = false;
                     }
                 
 

@@ -3135,7 +3135,7 @@ __webpack_require__.r(__webpack_exports__);
           // console.log(this.answerCheck)
 
           _this.answerCheck.forEach(function (correct) {
-            if (correct.is_correct === 1) _this.correctAnswers[index] = correct.answer;
+            if (correct.is_correct === true) _this.correctAnswers[index] = correct.answer;
           });
         });
 
@@ -3153,17 +3153,7 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.currentQuestion++;
         this.questions[this.currentQuestion].question;
-        this.datashuffled = this.questions[this.currentQuestion].answer;
-        console.log(this.datashuffled.length);
-
-        for (var i = this.datashuffled.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * this.datashuffled.length);
-          console.log(j); // const temp = this.datashuffled[i];
-          // console.log(temp)
-          // this.datashuffled = this.datashuffled[j];
-          // this.datashuffled[j] = temp;l
-        } // this.datashuffled = this.datashuffled.shuffle();
-
+        this.datashuffled = this.questions[this.currentQuestion].answer; // this.datashuffled = this.datashuffled.shuffle();
       }
     },
     handleResults: function handleResults() {

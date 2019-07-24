@@ -99,7 +99,7 @@ export default {
                     // console.log(index)
                     // console.log(this.answerCheck)
                     this.answerCheck.forEach(correct => {
-                        if(correct.is_correct === 1)
+                        if(correct.is_correct === true)
                             this.correctAnswers[index] = correct.answer;
                     });
                 });
@@ -122,17 +122,8 @@ export default {
                 this.currentQuestion++;
                 this.questions[this.currentQuestion].question
                 this.datashuffled = this.questions[this.currentQuestion].answer;
-                console.log(this.datashuffled.length)
-                for(let i = this.datashuffled.length - 1; i>0; i--){
-                    const j = Math.floor(Math.random()*this.datashuffled.length);
-
-
-                    console.log(j)
-                    // const temp = this.datashuffled[i];
-                    // console.log(temp)
-                    // this.datashuffled = this.datashuffled[j];
-                    // this.datashuffled[j] = temp;l
-                }
+                
+                
                 // this.datashuffled = this.datashuffled.shuffle();
             }
         },
