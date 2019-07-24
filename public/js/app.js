@@ -2044,6 +2044,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this4 = this;
 
       alert(this.$route.params.id);
+      alert('api/challenges/' + this.$route.params.id);
       axios.get('api/challenges/' + this.$route.params.id).then(function (res) {
         console.log(res);
         _this4.challenge = res.data.challenge;
