@@ -2058,7 +2058,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchData: function fetchData() {
       var _this5 = this;
 
-      axios.get('/api/challenges/' + this.$route.params.id).then(function (res) {
+      axios.get('/api/challenges/1').then(function (res) {
         _this5.challenge = res.data.challenge;
         console.log(res);
       })["catch"](function (err) {

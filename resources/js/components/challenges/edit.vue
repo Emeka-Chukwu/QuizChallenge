@@ -135,7 +135,7 @@ export default {
 
         fetchData: function()
         {
-            axios.get('/api/challenges/'+this.$route.params.id).then(res=>{
+            axios.get('/api/challenges/1').then(res=>{
                 this.challenge = res.data.challenge;
                 console.log(res)
             }).catch(err=>{
