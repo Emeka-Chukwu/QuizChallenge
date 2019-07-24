@@ -1996,7 +1996,7 @@ __webpack_require__.r(__webpack_exports__);
       challenge: '',
       topic: 1,
       topics: [],
-      challenge_id: 0
+      challenge_id: 1
     };
   },
   mounted: function mounted() {
@@ -2043,14 +2043,14 @@ __webpack_require__.r(__webpack_exports__);
     fetchdata: function fetchdata() {
       var _this4 = this;
 
-      alert(this.$route.params.id);
-      alert('api/challenges/' + this.$route.params.id);
-      axios.get('api/challenges/' + this.$route.params.id).then(function (res) {
+      // alert(this.$route.params.id)
+      // alert('api/challenges/'+this.$route.params.id)
+      axios.get('/api/challenges/' + this.$route.params.id).then(function (res) {
         console.log(res);
         _this4.challenge = res.data.challenge;
         _this4.challenge_id = res.data.id;
         console.log(_this4.challenge_id); // console.log(res.data.challenge)
-      }).then(function (err) {
+      })["catch"](function (err) {
         console.log(err);
       });
     },

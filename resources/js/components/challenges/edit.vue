@@ -65,7 +65,7 @@ export default {
             challenge:'',
             topic : 1,
             topics : [],
-            challenge_id: 0,
+            challenge_id: 1,
         }
     },
     mounted(){
@@ -116,17 +116,16 @@ export default {
 
         fetchdata : function()
         {
-            alert(this.$route.params.id)
-            alert('api/challenges/'+this.$route.params.id)
-            axios.get('api/challenges/'+this.$route.params.id)
-            .then(res=>{
+            // alert(this.$route.params.id)
+            // alert('api/challenges/'+this.$route.params.id)
+            axios.get('/api/challenges/'+this.$route.params.id).then(res=>{
                 console.log(res)
                 this.challenge = res.data.challenge;
                 this.challenge_id = res.data.id;
                 console.log(this.challenge_id)
                 // console.log(res.data.challenge)
             })
-            .then(err=>{
+            .catch(err=>{
                 console.log(err)
             })
         },
