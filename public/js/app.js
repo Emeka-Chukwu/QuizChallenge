@@ -2001,8 +2001,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.SubjectMounted();
-    this.topicsMounted();
-    this.fetchdata();
+    this.topicsMounted(); // this.fetchdata();
+
+    this.fetchData();
   },
   methods: {
     // to be called immediately the page loads
@@ -2045,7 +2046,7 @@ __webpack_require__.r(__webpack_exports__);
 
       // alert(this.$route.params.id)
       // alert('api/challenges/'+this.$route.params.id)
-      axios.get('/api/challenges/' + this.$route.params.id).then(function (res) {
+      axios.get('api/challenges/' + this.$route.params.id).then(function (res) {
         console.log(res);
         _this4.challenge = res.data.challenge;
         _this4.challenge_id = res.data.id;
@@ -2054,8 +2055,18 @@ __webpack_require__.r(__webpack_exports__);
         console.log(err);
       });
     },
-    submitChallenge: function submitChallenge(e) {
+    fetchData: function fetchData() {
       var _this5 = this;
+
+      axios.get('/api/challenges/' + this.$route.params.id).then(function (res) {
+        _this5.challenge = res.data.challenge;
+        console.log(res);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    submitChallenge: function submitChallenge(e) {
+      var _this6 = this;
 
       e.preventDefault();
       var formdata = new FormData();
@@ -2064,13 +2075,13 @@ __webpack_require__.r(__webpack_exports__);
       formdata.append('challenge', this.challenge);
       formdata.append('user_id', this.userId);
       formdata.append('_method', 'put');
-      axios.post('/api/challenges/' + this.challenge_id, formdata).then(function (res) {
-        _this5.message = "Challenge has been updated successfully";
-        console.log(_this5.message);
+      axios.post('/api/challenges/' + this.$route.params.id, formdata).then(function (res) {
+        _this6.message = "Challenge has been updated successfully";
+        console.log(_this6.message);
         console.log(res);
       }) // setTimeout(()=>this.$router.push('/challenges'), 2500)
       ["catch"](function (err) {
-        _this5.messageError = " Challenge not created ";
+        _this6.messageError = " Challenge not created ";
       }); // })
     }
   }

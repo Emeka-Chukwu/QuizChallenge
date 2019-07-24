@@ -71,7 +71,8 @@ export default {
     mounted(){
         this.SubjectMounted();
         this.topicsMounted();
-        this.fetchdata();
+        // this.fetchdata();
+        this.fetchData();
     },
     methods:{
         // to be called immediately the page loads
@@ -118,7 +119,7 @@ export default {
         {
             // alert(this.$route.params.id)
             // alert('api/challenges/'+this.$route.params.id)
-            axios.get('/api/challenges/'+this.$route.params.id).then(res=>{
+            axios.get('api/challenges/'+this.$route.params.id).then(res=>{
                 console.log(res)
                 this.challenge = res.data.challenge;
                 this.challenge_id = res.data.id;
@@ -126,6 +127,16 @@ export default {
                 // console.log(res.data.challenge)
             })
             .catch(err=>{
+                console.log(err)
+            })
+        },
+
+        fetchData: function()
+        {
+            axios.get('/api/challenges/'+this.$route.params.id).then(res=>{
+                this.challenge = res.data.challenge;
+                console.log(res)
+            }).catch(err=>{
                 console.log(err)
             })
         },
@@ -142,7 +153,7 @@ export default {
             formdata.append('challenge', this.challenge);
             formdata.append('user_id', this.userId)
             formdata.append('_method', 'put')
-            axios.post('/api/challenges/'+this.challenge_id,formdata)
+            axios.post('/api/challenges/'+this.$route.params.id,formdata)
             .then(res=>{
                 this.message = "Challenge has been updated successfully";
                 console.log(this.message)
