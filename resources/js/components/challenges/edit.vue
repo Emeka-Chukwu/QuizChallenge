@@ -119,6 +119,7 @@ export default {
             alert(this.$route.params.id)
             axios.get('api/challenges/'+this.$route.params.id)
             .then(res=>{
+                console.log(res)
                 this.challenge = res.data.challenge;
                 this.challenge_id = res.data.id;
                 console.log(this.challenge_id)
