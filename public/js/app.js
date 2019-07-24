@@ -2000,10 +2000,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
+    this.fetchData();
     this.SubjectMounted();
     this.topicsMounted(); // this.fetchdata();
-
-    this.fetchData();
   },
   methods: {
     // to be called immediately the page loads
@@ -2046,6 +2045,7 @@ __webpack_require__.r(__webpack_exports__);
 
       // alert(this.$route.params.id)
       // alert('api/challenges/'+this.$route.params.id)
+      alert('working and its detected');
       axios.get('api/challenges/' + this.$route.params.id).then(function (res) {
         console.log(res);
         _this4.challenge = res.data.challenge;

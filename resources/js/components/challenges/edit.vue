@@ -69,10 +69,11 @@ export default {
         }
     },
     mounted(){
+        this.fetchData();
+
         this.SubjectMounted();
         this.topicsMounted();
         // this.fetchdata();
-        this.fetchData();
     },
     methods:{
         // to be called immediately the page loads
@@ -119,6 +120,7 @@ export default {
         {
             // alert(this.$route.params.id)
             // alert('api/challenges/'+this.$route.params.id)
+            alert('working and its detected')
             axios.get('api/challenges/'+this.$route.params.id).then(res=>{
                 console.log(res)
                 this.challenge = res.data.challenge;
