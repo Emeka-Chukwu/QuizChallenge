@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                {{-- <div class="card-header">Dashboard</div> --}}
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {{-- You are logged in! --}}
                     <?php
                     if(Auth::check()){
                     
@@ -23,7 +23,7 @@
                         // $showd = 0;
 
 
-                        echo $show .' the id '.$showd;
+                        // echo $show .' the id '.$showd;
                         // $showd;
                     }
                     ?>

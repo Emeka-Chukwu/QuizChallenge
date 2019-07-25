@@ -4,32 +4,35 @@
 @endsection
 
 @section('contents')
-    <div class="jumbotron">
+    <div class="container">
              
-        
+            @if (count($challenges) > 0)
+                
             @foreach ($challenges as $challenge)
-                {{-- <h1>check here {{$challenge->questiosns}}</h1> --}}
+                <div class="card" style="margin-bottom:12px">
+                    <div class="card-body">
                 <h3>
                     {{$challenge->challenge}}
                 </h3>
+                <p><a href="/challenges/{{$challenge->id}}/quiz" class="btn btn-primary float-right"><span>Take a bow</span></a></p>
                 @if ($challenge->questions)
                 <?php $counter = 0; ?>
                     @foreach ($challenge->questions as $question)
                     <?php $counter++?>
                     @if ($counter <= 4)
-                        <div class="text-black"> 
-                           <a href="/challenges/1/quiz#/">
-                                {{$question->question}}
-                            </a>
-                        </div>
+                        
                     @endif
                     @endforeach
                 @endif
+                </div>
+            </div>
+
             @endforeach
-        
+            
+            @endif
     </div>
     {{-- <example-component></example-component> --}}
-    <td><span class="glyphicon glyphicon-envelope"> ee</span></td>
+    
 
 
     

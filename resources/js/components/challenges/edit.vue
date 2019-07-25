@@ -157,6 +157,8 @@ export default {
                 this.message = "Challenge has been updated successfully";
                 console.log(this.message)
                 console.log(res)
+                setTimeout(()=>this.$router.push('/questions'), 1500)
+
             })
                 // setTimeout(()=>this.$router.push('/challenges'), 2500)
                 .catch(err =>{

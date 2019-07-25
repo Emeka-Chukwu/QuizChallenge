@@ -4,7 +4,7 @@
         <h3>New Challenge</h3>
 
         <form  @submit="formSubmit" enctype="multipart/form-data">
-            <!-- value of the challenge) to insert into challenge_id which is in the questions table --> -->
+            <!-- value of the challenge) to insert into challenge_id which is in the questions table --> 
        <div class="form-group">
             <label for="subject"> Choose Subject</label> 
             <br>
@@ -134,7 +134,7 @@ export default {
                 this.message = "Challenge has been created successfully";
                 console.log(this.message)
                 console.log(res)
-                //  setTimeout(()=>this.$router.push('/questions'), 1500)
+                 setTimeout(()=>this.$router.push('/questions'), 1500)
                 }).catch(err =>{
                     this.messageError = " Challenge not created ";
                     console.log(err)

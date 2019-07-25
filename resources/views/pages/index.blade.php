@@ -11,13 +11,15 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
+            <img class="d-block w-100" src="/storage/images/imagetwo.jpg" alt="Third slide">
+
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
+            <img class="d-block w-100" src="/storage/images/imageone.jpg" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
+            <img class="d-block w-100" src="/storage/images/image1.jpg" alt="First slide">
+
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -51,10 +53,11 @@
             
         <div class="row">
                 @foreach ($subjects as $subject)
-            <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <br>
                 <div class="card">
                     <div class="card-body">
-                        <img src="#" alt="" class="card-img-top">
+                        <img src="#" alt="No image yet" class="card-img-top">
                         <h3 class="card-title">{{$subject->subject}}</h3>
                         <h6 class="card-title">{{$subject->description}}</h6>
                         <?php
@@ -74,13 +77,13 @@
                         @endforeach
                         {{-- @endif  --}}
                         {{-- <div class="card-text">{{$subject->topics}} </div> --}}
-                            <a href="/topics/{{$subject->id}}" class="btn btn-primary">
+                            <a href="/topics/{{$subject->id}}" class="btn btn-primary float-light">
                                             Read More
                         </a>
                                     
                     </div>
                 </div>
-            <h2>{{$subject->subject}}</h2>
+            {{-- <h2>{{$subject->subject}}</h2> --}}
 
             
             {{--  --}}

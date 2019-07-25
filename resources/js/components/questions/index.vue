@@ -1,8 +1,10 @@
 <template>
     <div>
+        <br>
         <div>
             <router-link to="/questions/create" class="btn btn-primary">Add a Question</router-link>
         </div>
+        <br>
         <!-- the subject selection for querying the database for where conditon in the topicsController -->
         <div class="form-group">
             <label for="subject"> Choose Subject</label> 
@@ -54,8 +56,8 @@
                     <td>{{index}}</td>
                     <td>{{question.question}}</td>
                     <!-- <td><span class="glyphicon glyphicon-envelope"><router-link :to="{name: 'questionsEdit', id: question.id}"></router-link></span></td> -->
-                    <td><span btn btn-primary><router-link :to="`/questions/${question.id}/edit`">Edit</router-link></span></td>
-                    <td><span btn btn-primary><router-link :to="`/questions/${question.id}/delete`">Delete</router-link></span></td>
+                    <td><span ><router-link class="btn btn-primary" :to="`/questions/${question.id}/edit`">Edit</router-link></span></td>
+                    <td><span><router-link class="btn btn-danger" :to="`/questions/${question.id}/delete`">Delete</router-link></span></td>
 
                     <!-- <td><span btn btn-primary><router-link to="'/questions/'+question.id+'/edit'"></router-link></span></td> -->
 

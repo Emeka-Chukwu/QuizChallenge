@@ -3,10 +3,12 @@
     
     <div v-if="introStage">
         <h3>
-            <h2>
-            Welcome to the quiz : by {{userName}}
-            </h2>
-            <br><br>
+            <h4>
+                <br>
+        Host: {{userName}} <br>
+            <!-- Id : {{userId}} -->
+            </h4>
+            <br>
         </h3>
         <div class="text-capitalize text-danger">
             {{description}}
@@ -19,9 +21,9 @@
                
              
             <h3>
-               <small><span>{{currentQuestion+1}}</span></small> {{questions[currentQuestion].question}}
+               <small><span>No {{currentQuestion+1}})</span></small> {{questions[currentQuestion].question}}
             </h3>
-            <br>
+            <br><br>
              <div v-for="(mainanswer, index) in questions[currentQuestion].answer" :key="mainanswer.id"> 
                 <h5>
                 <input type="radio" :name="'currentQuestion'+index" :id="'current'+index" :value="mainanswer.answer" v-model="answermodel">
@@ -32,7 +34,7 @@
                <!-- <b> {{indexQ}}</b> -->
                <!-- {{datashuffled}} -->
             
-            <button @click="nextQuestion">Answer </button>
+            <button @click="nextQuestion" class="btn-primary">Answer </button>
         </div>
 
     </div>
@@ -44,8 +46,8 @@
         </p>
 
     </div>
-    <router-link :to="{name: 'emeka'}">quiz</router-link>
-    http://127.0.0.1:8000/challenges/1/quiz#/
+    <!-- <router-link :to="{name: 'emeka'}">quiz</router-link> -->
+    <!-- http://127.0.0.1:8000/challenges/1/quiz#/ -->
                     <!-- <td><span btn btn-primary><router-link :to="`/questions/${1}/edit`">emeka</router-link></span></td> -->
     
 
@@ -110,10 +112,13 @@ export default {
         
         nextQuestion: function(e)
         {
-           
-            this.answers[this.currentQuestion] = this.answermodel;
+            if(!this.answermodel =='')
+            {
+                this.answers[this.currentQuestion] = this.answermodel;
             // console.log(this.answers)
-            if(this.currentQuestion+1 ==this.questions.length){
+            this.answermodel = '';
+            console.log(this.answermodel)
+            if(this.currentQuestion+1 == this.questions.length){
                 // call the function to excute an get the total marks scored by the user
                 this.handleResults();
                 this.questionStage = false;
@@ -126,6 +131,11 @@ export default {
                 
                 // this.datashuffled = this.datashuffled.shuffle();
             }
+            }
+            else{
+                alert('please select an option')
+            }
+            
         },
 
         handleResults: function(){

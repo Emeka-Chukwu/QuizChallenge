@@ -2,17 +2,35 @@
 
 
 @section('content')
+<style>
+    img
+    {
+        max-width: 32px ;
+        max-height: 1px;
+        
+    }
+</style>
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-md-8 col-sm-7">
+        <br>
+        <div class="col-xs-12 col-sm-12 col-md-8" style="margin-top:20px">
                 @yield('contents')
         </div>
-        <div class="col-xs-12 col-md-4 col-sm-5">
-            <div class="text-center text-danger">
-                <h3>
-                        this is the sidebar page of the the template
-                        @yield('sidebar')
+        <br>
+        <div class="col-xs-12 col-sm-12 col-md-4" style="margin-top:20px">
+            <br>
+            <div class="text-center text-capitalize card" style="height:45vh">
+                <h3 class="bg-primary text-white" style="margin-bottom:20px"><br>
+
+                        the sidebar of the website 
+                        <br>
                 </h3>
+                {{-- <img src="/storage/images/image1.jpg" alt="quiz"> --}}
+                <div class="card-img">
+                    <img src="/storage/images/imagethree.jpg" alt="quiz">
+                </div>
+                        @yield('sidebar')
+                
             </div>
         </div>
     </div>

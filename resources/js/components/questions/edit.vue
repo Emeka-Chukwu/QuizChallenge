@@ -76,7 +76,7 @@
            </div>
 
            <div class="form-group">
-               <input type="submit" value="Create" class="btn btn-primary">
+               <input type="submit" value="Update" class="btn btn-primary">
            </div>
        </form>
         
@@ -223,8 +223,9 @@ export default {
             axios.put('/api/questions/'+this.$route.params.id, data)
             .then(res=>{
                 this.message = "question has been updated successfully";
+                alert(this.message)
                 console.log(res)
-                // setTimeout(()=>this.$router.push('/index'), 2500)
+                setTimeout(()=>this.$router.push('/questions'), 2500)
             })
                 .catch(err =>{
                     this.messageError = " question not submitted ";

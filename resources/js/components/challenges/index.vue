@@ -1,7 +1,7 @@
 <template>
     <div class="containe">
         <div class=""><br>
-            <router-link to="/challenges/create">Start Challenge</router-link>
+            <router-link class="btn btn-primary" to="/challenges/create">Start Challenge</router-link>
             <br>
             <br>
         </div>
@@ -49,8 +49,8 @@
                     <td>{{index}}</td>
                     <td>{{challenge.challenge}}</td>
                     <!-- <td><span class="glyphicon glyphicon-envelope"><router-link :to="{name: 'questionsEdit', id: question.id}"></router-link></span></td> -->
-                    <td><span btn btn-primary><router-link :to="`/challenges/${challenge.id}/edit`">Edit</router-link></span></td>
-                    <td><span btn btn-primary><router-link :to="`/challenges/${challenge.id}/delete`">Delete</router-link></span></td>
+                    <td><span><router-link class="btn btn-primary" :to="`/challenges/${challenge.id}/edit`">Edit</router-link></span></td>
+                    <td><span btn btn-primary><router-link class="btn btn-danger" :to="`/challenges/${challenge.id}/delete`">Delete</router-link></span></td>
 
                     <!-- <td><span btn btn-primary><router-link to="'/questions/'+question.id+'/edit'"></router-link></span></td> -->
 
