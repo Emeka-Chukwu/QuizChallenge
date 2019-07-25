@@ -28,7 +28,15 @@
             </div>
 
             @endforeach
-            
+            @else
+            <div class="card">
+                <div class="body" style="margin-top: 25px">
+                    <h2 class="text-center text-capitalize">no challenges yet</h2>
+                    <p class="text-center text-danger" >
+                        There are no challenges for this topic yet.
+                    </p>
+                </div>
+            </div>
             @endif
     </div>
     {{-- <example-component></example-component> --}}

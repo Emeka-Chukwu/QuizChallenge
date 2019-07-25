@@ -10308,6 +10308,6 @@ a.text-dark:focus {
 }
 
 img {
-    max-width: 98%;
-    max-height: 98%;
+    max-width: 99%;
+    max-width: 30vh;
 }

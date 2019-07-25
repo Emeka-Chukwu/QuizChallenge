@@ -35,7 +35,7 @@ class PagesController extends Controller
     public function startchallenge($challenge)
     {
         // return 'yeah';
-        $question = Question::where('challenge_id',$challenge)->paginate(1);
+        $question = Question::where('challenge_id',$challenge)->take(1)->get();
         // return $question;
         return view('pages.quiz',['question'=>$question]);
     }

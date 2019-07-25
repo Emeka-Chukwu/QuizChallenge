@@ -18,8 +18,8 @@ Vue.use(VueResource);
 // Vue.use(axios);
 
 const routes = [
-    { path: '/emeka', name: 'emeka', component: require('./components/quiz.vue').default },
-    { path: '/', component: require('./components/startquiz.vue').default },
+    { path: '/', name: 'emeka', component: require('./components/quiz.vue').default },
+    { path: '/quiz', component: require('./components/startquiz.vue').default },
     { path: '/user', name: 'navbar', component: require('./components/navbar.vue').default },
     { path: '/challenges', name: 'challenges', component: require('./components/challenges/index.vue').default },
     { path: '/challenges/create', name: 'challengesCreate', component: require('./components/challenges/create.vue').default },

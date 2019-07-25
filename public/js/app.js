@@ -3063,8 +3063,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // props:['userName', 'topicName'],
+  props: ['userName', 'topicName'],
   data: function data() {
     return {
       name: this.userName,
@@ -41488,21 +41489,16 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("h2", [_vm._v("Take a challenge from " + _vm._s(_vm.userNmae))]),
+      _c("br"),
+      _c("br"),
       _vm._v(" "),
-      _c("h4", [_vm._v("Quiz about " + _vm._s(_vm.topic) + " ")]),
+      _c("h4", [_vm._v("Take a challenge from " + _vm._s(_vm.userName))]),
       _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "\n        " +
-            _vm._s(_vm.description) +
-            " or some texts will be here\n    "
-        )
-      ]),
+      _c("p"),
       _vm._v(" "),
       _c("p", [_vm._v("Start the quiz ")]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/" } }, [
+      _c("router-link", { attrs: { to: "/quiz" } }, [
         _c("p", { staticClass: "btn btn-primary" }, [
           _vm._v("\n                Start\n            ")
         ])
@@ -58358,11 +58354,11 @@ Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]);
 Vue.use(vue_resource__WEBPACK_IMPORTED_MODULE_1__["default"]); // Vue.use(axios);
 
 var routes = [{
-  path: '/emeka',
+  path: '/',
   name: 'emeka',
   component: __webpack_require__(/*! ./components/quiz.vue */ "./resources/js/components/quiz.vue")["default"]
 }, {
-  path: '/',
+  path: '/quiz',
   component: __webpack_require__(/*! ./components/startquiz.vue */ "./resources/js/components/startquiz.vue")["default"]
 }, {
   path: '/user',

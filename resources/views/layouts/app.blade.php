@@ -18,6 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        img{
+            max-width: 99%;
+            max-height: 40vh;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

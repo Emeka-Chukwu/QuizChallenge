@@ -1,6 +1,7 @@
 @extends('inc.master')
 @section('contents')
-    @if ($question->count() > 0)
+    @if ($question)
+        
     <div class="container">
         <div class="card">
             <div class="card-body">
@@ -19,9 +20,13 @@
         </div>
     </div>
     @else
+        <div class="card">
+            <div class="body" style="margin-top: 25px">
                 <h2 class="text-center text-capitalize">no questions yet</h2>
                 <p class="text-center text-danger" >
                     There are no questions for this challenge yet.
                 </p>
+            </div>
+        </div>
     @endif
 @endsection

@@ -1,13 +1,14 @@
 <template>
     <div>   
-        <h2>Take a challenge from {{userNmae}}</h2>
-        <h4>Quiz about {{topic}} </h4>
+        <br><br>
+        <h4>Take a challenge from {{userName}}</h4>
+        <!-- <h4>Quiz about {{topic}} </h4> -->
 
         <p>
-            {{description}} or some texts will be here
+           
         </p>
         <p>Start the quiz </p>
-            <router-link to="/">
+            <router-link to="/quiz">
                 <p class="btn btn-primary">
                     Start
                 </p>
@@ -21,7 +22,7 @@
 
 <script>
 export default {
-    // props:['userName', 'topicName'],
+    props:['userName', 'topicName'],
     data(){
         return{
             name: this.userName,

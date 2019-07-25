@@ -19,7 +19,7 @@ class Challenge extends Model
     
     public function topics()
     {
-        return $this->belongsTo(TOpic::class);
+        return $this->belongsTo(Topic::class);
     }
 
     public function user()
