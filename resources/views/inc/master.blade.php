@@ -2,14 +2,7 @@
 
 
 @section('content')
-<style>
-    img
-    {
-        max-width: 32px ;
-        max-height: 1px;
-        
-    }
-</style>
+
 <div class="container">
     <div class="row">
         <br>
@@ -17,7 +10,7 @@
                 @yield('contents')
         </div>
         <br>
-        <div class="col-xs-12 col-sm-12 col-md-4" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-12 col-md-4 hidden-xs-down hidden-sm-down hidden-md-down" style="margin-top:20px">
             <br>
             <div class="text-center text-capitalize card" style="height:45vh">
                 <h3 class="bg-primary text-white" style="margin-bottom:20px"><br>

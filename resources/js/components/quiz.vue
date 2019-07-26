@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    props:['userName', 'topicName'],
+    props:['userNa', 'topicame'],
     data(){
         return{
             name: this.userName,

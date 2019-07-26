@@ -3065,7 +3065,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['userName', 'topicName'],
+  props: ['userNa', 'topicame'],
   data: function data() {
     return {
       name: this.userName,
@@ -3375,6 +3375,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
@@ -3402,6 +3404,7 @@ __webpack_require__.r(__webpack_exports__);
         console.log(err);
       });
     },
+    selectedSubject: function selectedSubject() {},
     formSubmit: function formSubmit(e) {
       var _this2 = this;
 
@@ -41784,7 +41787,11 @@ var render = function() {
         on: { submit: _vm.formSubmit }
       },
       [
+        _c("br"),
+        _vm._v(" "),
         _c("div", { staticClass: "form-group" }, [
+          _c("br"),
+          _vm._v(" "),
           _c("label", { attrs: { for: "subject" } }, [
             _vm._v(" Choose Subject")
           ]),
@@ -59494,8 +59501,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\laravel58\QuizChallenge\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel58\QuizChallenge\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\laravel58\quizchallenge\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel58\quizchallenge\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ }),

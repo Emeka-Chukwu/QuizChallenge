@@ -9,7 +9,9 @@
             <!-- the topic selection for querying the database for where condition in the controller -->
 
           <!-- the challenge selection for querying the database for where condition in the controller -->
+          <br>
            <div class="form-group">
+               <br>
             <label for="subject"> Choose Subject</label> 
             <br>
             
@@ -73,6 +75,11 @@ export default {
             }).catch(err =>{
                 console.log(err)
             })
+        },
+
+        selectedSubject : function()
+        {
+
         },
         
         formSubmit : function(e)
