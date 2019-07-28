@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => env('MAILGUN_DOMAIN','http://peaceful-tor-54863.herokuapp.com'),
+        'secret' => env('MAILGUN_SECRET','c3db52405089cc07cd368b6ab9935462-c50f4a19-54e1ce56'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],
 
